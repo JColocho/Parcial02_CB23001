@@ -6,6 +6,6 @@
     <title><?= $title?></title>
 </head>
 <body>
-    
+    <h2>Inicio</h2>
 </body>
 </html>
