@@ -6,6 +6,20 @@ class IndexController{
         return $this->view("IndexView",["title"=>"Index"]);
     }
 
+    public function resultado(){
+        $nombre = $_POST["nombre"] ?? "";
+        $correo = $_POST["correo"] ?? "";
+        $dui = $_POST["dui"] ?? "";
+
+        $P = $_POST["P"] ??"";
+
+
+        return $this->view("ResultadoView",["title"=> "Resultados",
+                                                        "nombre"=> $nombre,
+                                                        "correo" => $correo,
+                                                        "dui"=> $dui]);
+    }
+
     public function view($vista,$data = []){
         extract($data);
 
